@@ -8,9 +8,17 @@ import java.util.StringTokenizer;
 import atividadepratica.model.Cliente;
 
 /**
- *0
- * @author abreu
+ *
+ * Daniel de Abreu - RA:1914731
+ * Bruna de Paula Oliveira - RA: 2312778
+ * 
+ * Curso: Engenharia de Software 
+ * Turma: ES48S - Programação Desktop - ES81 (2024_02)
+ * 
+ * ATIVIDADE PRÁTICA EM DUPLA
+ * 
  */
+
 public class ControllerClientesArqTxt extends  ControllerArqTxt{
     
     protected Cliente cliente = new Cliente();

@@ -6,10 +6,19 @@ package atividadepratica.view;
 
 import javax.swing.JFileChooser;
 import atividadepratica.controller.ControllerClientesArqTxt;
+
 /**
  *
- * @author abreu
+ * Daniel de Abreu - RA:1914731
+ * Bruna de Paula Oliveira - RA: 2312778
+ * 
+ * Curso: Engenharia de Software 
+ * Turma: ES48S - Programação Desktop - ES81 (2024_02)
+ * 
+ * ATIVIDADE PRÁTICA EM DUPLA
+ * 
  */
+
 public class Cadastro_Clientes extends javax.swing.JFrame {
 
     /**
@@ -55,32 +64,29 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        titulo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         titulo.setText("CADASTRO CLIENTES");
 
         label_Nome.setText("Nome.....:");
 
-        campoTextoCPFCliente.setText("CPF");
         campoTextoCPFCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTextoCPFClienteActionPerformed(evt);
             }
         });
 
-        campoTextoEmailCliente.setText("Email");
         campoTextoEmailCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTextoEmailClienteActionPerformed(evt);
             }
         });
 
-        campoTextoTelefoneCliente.setText("Telefone");
         campoTextoTelefoneCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTextoTelefoneClienteActionPerformed(evt);
             }
         });
 
-        campoTextoNomeCliente.setText("Nome");
         campoTextoNomeCliente.setActionCommand("<Not Set>");
         campoTextoNomeCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         campoTextoNomeCliente.setName(""); // NOI18N

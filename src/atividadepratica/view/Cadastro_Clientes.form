@@ -138,6 +138,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="titulo">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CADASTRO CLIENTES"/>
       </Properties>
     </Component>
@@ -147,32 +150,22 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="campoTextoCPFCliente">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="CPF"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTextoCPFClienteActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="campoTextoEmailCliente">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Email"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTextoEmailClienteActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="campoTextoTelefoneCliente">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Telefone"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTextoTelefoneClienteActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="campoTextoNomeCliente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nome"/>
         <Property name="actionCommand" type="java.lang.String" value="&lt;Not Set&gt;"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Text Cursor"/>
