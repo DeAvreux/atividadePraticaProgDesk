@@ -5,7 +5,7 @@
 package atividadepratica.view;
 
 import javax.swing.JFileChooser;
-
+import atividadepratica.controller.ControllerClientesArqTxt;
 /**
  *
  * @author abreu
@@ -18,6 +18,8 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
     public Cadastro_Clientes() {
         initComponents();
     }
+    
+    ControllerClientesArqTxt controle = new ControllerClientesArqTxt();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,50 +30,107 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         titulo = new javax.swing.JLabel();
-        ButtonAbrir = new javax.swing.JButton();
-        ButtonSalvar = new javax.swing.JButton();
-        campoTextoAbrir = new javax.swing.JTextField();
-        campoTextoSalvar = new javax.swing.JTextField();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        painelTextoConteúdo = new javax.swing.JTextPane();
+        labelLocalArquivo = new javax.swing.JLabel();
+        buttonAbrir = new javax.swing.JButton();
+        buttonSalvar = new javax.swing.JButton();
+        buttonFechar = new javax.swing.JButton();
+        label_Nome = new javax.swing.JLabel();
         campoTextoCPFCliente = new javax.swing.JTextField();
-        label_Email = new javax.swing.JLabel();
         campoTextoEmailCliente = new javax.swing.JTextField();
-        label_CPF = new javax.swing.JLabel();
-        label_Telefone = new javax.swing.JLabel();
         campoTextoTelefoneCliente = new javax.swing.JTextField();
         campoTextoNomeCliente = new javax.swing.JTextField();
-        label_Nome = new javax.swing.JLabel();
+        label_Email = new javax.swing.JLabel();
+        label_CPF = new javax.swing.JLabel();
+        label_Telefone = new javax.swing.JLabel();
+
+        jMenu2.setText("File");
+        jMenuBar2.add(jMenu2);
+
+        jMenu3.setText("Edit");
+        jMenuBar2.add(jMenu3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         titulo.setText("CADASTRO CLIENTES");
 
-        ButtonAbrir.setText("ABRIR");
-        ButtonAbrir.addMouseListener(new java.awt.event.MouseAdapter() {
+        jScrollPane1.setViewportView(painelTextoConteúdo);
+
+        labelLocalArquivo.setText("Salvo em: ...");
+
+        buttonAbrir.setText("Abrir");
+        buttonAbrir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ButtonAbrirMouseClicked(evt);
+                buttonAbrirMouseClicked(evt);
             }
         });
 
-        ButtonSalvar.setText("SALVAR");
-        ButtonSalvar.addMouseListener(new java.awt.event.MouseAdapter() {
+        buttonSalvar.setText("Salvar");
+        buttonSalvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ButtonSalvarMouseClicked(evt);
+                buttonSalvarMouseClicked(evt);
             }
         });
 
-        campoTextoAbrir.addActionListener(new java.awt.event.ActionListener() {
+        buttonFechar.setText("Fechar");
+        buttonFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonFecharMouseClicked(evt);
+            }
+        });
+        buttonFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTextoAbrirActionPerformed(evt);
+                buttonFecharActionPerformed(evt);
             }
         });
 
-        campoTextoSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTextoSalvarActionPerformed(evt);
-            }
-        });
+        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(labelLocalArquivo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(buttonAbrir, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(buttonSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(buttonFechar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(labelLocalArquivo)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(buttonAbrir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buttonSalvar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                        .addComponent(buttonFechar)))
+                .addContainerGap())
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonAbrir)
+                    .addComponent(buttonSalvar)
+                    .addComponent(buttonFechar))
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelLocalArquivo)
+                .addContainerGap())
+        );
+
+        label_Nome.setText("Nome.....:");
 
         campoTextoCPFCliente.setText("CPF");
         campoTextoCPFCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -80,13 +139,12 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
             }
         });
 
-        label_Email.setText("Email....:");
-
         campoTextoEmailCliente.setText("Email");
-
-        label_CPF.setText("CPF.........:");
-
-        label_Telefone.setText("Telefone:");
+        campoTextoEmailCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoTextoEmailClienteActionPerformed(evt);
+            }
+        });
 
         campoTextoTelefoneCliente.setText("Telefone");
         campoTextoTelefoneCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -100,138 +158,72 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
         campoTextoNomeCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         campoTextoNomeCliente.setName(""); // NOI18N
 
-        label_Nome.setText("Nome.....:");
+        label_Email.setText("Email....:");
 
-        jLayeredPane1.setLayer(campoTextoCPFCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(label_Email, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(campoTextoEmailCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(label_CPF, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(label_Telefone, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(campoTextoTelefoneCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(campoTextoNomeCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(label_Nome, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        label_CPF.setText("CPF.........:");
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(label_Nome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoTextoNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(label_Email)
-                        .addGap(18, 18, 18)
-                        .addComponent(campoTextoEmailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(label_CPF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoTextoCPFCliente))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(label_Telefone)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoTextoTelefoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_Nome)
-                    .addComponent(campoTextoNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_CPF)
-                    .addComponent(campoTextoCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_Telefone)
-                    .addComponent(campoTextoTelefoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_Email)
-                    .addComponent(campoTextoEmailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
+        label_Telefone.setText("Telefone:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(titulo)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ButtonAbrir)
-                                .addComponent(ButtonSalvar))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(campoTextoAbrir, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(campoTextoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(titulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_Nome)
+                            .addComponent(label_CPF)
+                            .addComponent(label_Telefone)
+                            .addComponent(label_Email))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoTextoEmailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoTextoTelefoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoTextoCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoTextoNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {campoTextoCPFCliente, campoTextoEmailCliente, campoTextoNomeCliente, campoTextoTelefoneCliente});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titulo)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_Nome)
+                    .addComponent(campoTextoNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonAbrir)
-                    .addComponent(campoTextoAbrir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_CPF)
+                    .addComponent(campoTextoCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLayeredPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonSalvar)
-                    .addComponent(campoTextoSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(label_Telefone)
+                    .addComponent(campoTextoTelefoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_Email)
+                    .addComponent(campoTextoEmailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {campoTextoCPFCliente, campoTextoEmailCliente, campoTextoNomeCliente, campoTextoTelefoneCliente});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void campoTextoAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTextoAbrirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoTextoAbrirActionPerformed
-
-    private void campoTextoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTextoSalvarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoTextoSalvarActionPerformed
-
-    private void ButtonAbrirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAbrirMouseClicked
-        // TODO add your handling code here:
-        JFileChooser seletor = new JFileChooser();
-        int retorno = seletor.showOpenDialog(this);
-        
-        if (retorno == JFileChooser.APPROVE_OPTION) {
-            campoTextoAbrir.setText(seletor.getSelectedFile().getAbsolutePath());
-        } else {
-            //Arquivo não encontrado
-            campoTextoAbrir.setText("");
-        }
-    }//GEN-LAST:event_ButtonAbrirMouseClicked
-
-    private void ButtonSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSalvarMouseClicked
-        // TODO add your handling code here:
-        JFileChooser seletor = new JFileChooser();
-        int retorno = seletor.showSaveDialog(this);
-        
-        if (retorno == JFileChooser.APPROVE_OPTION) {
-            campoTextoSalvar.setText(seletor.getSelectedFile().getAbsolutePath());
-        } else {
-            //Arquivo não encontrado
-            campoTextoSalvar.setText("");
-        }
-    }//GEN-LAST:event_ButtonSalvarMouseClicked
 
     private void campoTextoCPFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTextoCPFClienteActionPerformed
         // TODO add your handling code here:
@@ -240,6 +232,58 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
     private void campoTextoTelefoneClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTextoTelefoneClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTextoTelefoneClienteActionPerformed
+
+    private void campoTextoEmailClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTextoEmailClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoTextoEmailClienteActionPerformed
+
+    private void buttonFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFecharActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonFecharActionPerformed
+
+    private void buttonFecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonFecharMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_buttonFecharMouseClicked
+
+    private void buttonAbrirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAbrirMouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        JFileChooser seletor = new JFileChooser();
+        int retorno = seletor.showOpenDialog(this);
+        
+        if (retorno == JFileChooser.APPROVE_OPTION) {
+            labelLocalArquivo.setText(seletor.getSelectedFile().getAbsolutePath());
+            controle.setArq(seletor.getSelectedFile());
+            if (controle.ler()) {
+                System.out.println("Arquivo lido");
+            } else {
+                System.out.println("Arquivo não lido");
+            }
+            String aux = controle.getTexto();
+            System.out.println("String: " + aux);
+            this.painelTextoConteúdo.setText(aux);
+        } else {
+            //Arquivo não encontrado
+            labelLocalArquivo.setText("");
+        }
+    }//GEN-LAST:event_buttonAbrirMouseClicked
+
+    private void buttonSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonSalvarMouseClicked
+        // TODO add your handling code here:
+         // TODO add your handling code here:
+        JFileChooser seletor = new JFileChooser();
+        int retorno = seletor.showSaveDialog(this);
+        
+        if (retorno == JFileChooser.APPROVE_OPTION) {
+            labelLocalArquivo.setText(seletor.getSelectedFile().getAbsolutePath());
+            controle.setCliente(this.campoTextoNomeCliente.getText(),this.campoTextoCPFCliente.getText(),this.campoTextoTelefoneCliente.getText(),this.campoTextoEmailCliente.getText());
+            controle.registrarCliente();
+        } else {
+            //Arquivo não encontrado
+            labelLocalArquivo.setText("");
+        }
+    }//GEN-LAST:event_buttonSalvarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -269,6 +313,7 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Cadastro_Clientes().setVisible(true);
@@ -277,19 +322,24 @@ public class Cadastro_Clientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonAbrir;
-    private javax.swing.JButton ButtonSalvar;
-    private javax.swing.JTextField campoTextoAbrir;
+    private javax.swing.JButton buttonAbrir;
+    private javax.swing.JButton buttonFechar;
+    private javax.swing.JButton buttonSalvar;
     private javax.swing.JTextField campoTextoCPFCliente;
     private javax.swing.JTextField campoTextoEmailCliente;
     private javax.swing.JTextField campoTextoNomeCliente;
-    private javax.swing.JTextField campoTextoSalvar;
     private javax.swing.JTextField campoTextoTelefoneCliente;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelLocalArquivo;
     private javax.swing.JLabel label_CPF;
     private javax.swing.JLabel label_Email;
     private javax.swing.JLabel label_Nome;
     private javax.swing.JLabel label_Telefone;
+    private javax.swing.JTextPane painelTextoConteúdo;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }
