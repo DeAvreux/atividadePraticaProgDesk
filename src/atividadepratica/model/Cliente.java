@@ -61,6 +61,10 @@ public class Cliente {
         return telefoneCliente;
     }
     
+    public void mostraDados() {
+        System.out.println("-> NomeCli: " + this.nomeCliente + " CPFCli: " + this.cpfCliente + " TelefoneCli: " +  this.telefoneCliente + " EmailCli: " + this.emailCliente);
+    }
+    
     
     
 }

@@ -16,7 +16,7 @@ public class ControllerClientesArqTxt extends  ControllerArqTxt{
     protected Cliente cliente = new Cliente();
     
     public void scanCliente() {
-        setArquivo("Abrir");
+        //setArquivo("Abrir");
         ler();
         String aux = getTexto();
         
@@ -32,7 +32,7 @@ public class ControllerClientesArqTxt extends  ControllerArqTxt{
     public void registrarCliente() {
             String aux = cliente.getNomeCliente() + ";" + cliente.getCpfCliente() + ";" + cliente.getTelefoneCliente() + ";" + cliente.getEmailCliente();
             setTexto(aux);
-            setArquivo("Salvar");
+            //setArquivo("Salvar");
             escrever(true);
     }
     
